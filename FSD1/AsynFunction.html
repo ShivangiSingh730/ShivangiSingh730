@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello this aync/await function</p>
+    <script>
+        function myPromise()
+        {
+            return new Promise(function(resolve,reject))
+            {
+                setTimeoutfunction((){
+                    let data="hi,this is promise";
+                    resolve(data)
+                },200)
+            }
+        }
+        aync function myData()
+        {
+            try{
+                let res=await myPromise()
+                console.log(res)
+            }
+            catch(err){
+                console.log(err)
+            }
+        }
+    </script>
+</body>
+</html>
